@@ -1,0 +1,10 @@
+/* .pic{
+background-image:url('homepg.jpg');
+background-repeat: no-repeat;
+} */
+
+.traveldeets{
+    border:3px solid black;
+    width: 80%;
+    height: 50vh;
+}

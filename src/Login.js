@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import './Entry.css';
+import { useParams } from 'react-router-dom';
 
 export let Login = () => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const handleSubmit1 =(event) =>{
          console.log("Data",data)
          navigate("/hp");
          setData1(data)
-         
+     
          
      }
     })
