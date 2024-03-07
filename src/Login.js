@@ -38,8 +38,12 @@ const handleSubmit1 =(event) =>{
        return  alert("Email or Passcode Incorrect");
      }else {
          console.log("Data",data)
-         navigate("/hp");
-         setData1(data)
+         setData1(data);
+         console.log("name",data.name)
+         const username=data.name;
+         navigate(`/hp/${username}`);
+         
+         
      
          
      }
@@ -56,7 +60,7 @@ const handleSubmit1 =(event) =>{
         <form>
             <input type='text' placeholder="Email" name='email' value={data1.email} onChange={Data1}/><br></br>
             <input type='password' placeholder="Passcode" name='passcode' value={data1.passcode} onChange={Data1}/><br></br><br></br>
-            <button className="btn btn-info"onClick={handleSubmit1}>Log in</button><br></br>
+            <button className="btn btn-info" onClick={handleSubmit1}>Log in</button><br></br>
             <Link to ="/r" className='link'>Don't have an account?</Link>
         </form>
     </div>
