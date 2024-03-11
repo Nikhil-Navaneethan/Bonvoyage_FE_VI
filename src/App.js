@@ -4,6 +4,11 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Login from './/Login';
 import Register from './/Register';
 import { HomePage } from './HomePage';
+import Andhra from './Andhra';
+import Karnataka from './Karnataka';
+import Kerala from './Kerala';
+import Tamilnadu from './Tamilnadu';
+import Admin from './Admin';
 
 
 function App() {
@@ -11,9 +16,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
+        <Route path='admin' element={<Admin/>}/>
         <Route path="/l" element={<Login/>}/>
         <Route path="/r" element={<Register/>}/>
-        <Route path='/hp/:username' element={<HomePage/>}/>
+        <Route path="/hp/:username" element={<HomePage/>}/>
+        <Route path="/Andhra" element={<Andhra/>}/>
+        <Route path="/Karnataka" element={<Karnataka/>}/>
+        <Route path="/Kerala" element={<Kerala/>}/>
+        <Route path="/Tamilnadu" element={<Tamilnadu/>}/>
       </Routes>
       </BrowserRouter>
     </div>

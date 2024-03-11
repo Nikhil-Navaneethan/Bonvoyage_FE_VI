@@ -3,12 +3,17 @@ import './HomePage.css'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export const HomePage = () => {
   const { username } = useParams();
-  const {navigate} = useNavigate();
+  const navigate = useNavigate();
+  // let {history} = useHistory();
+
+
+  
 
   let [data,setData] = useState({
     name:username,
@@ -24,7 +29,7 @@ console.log(name,value);
 }
 
 
-let handleSubmit = () => {
+let HandleSubmit = () => {
     let state = {
         name: username,
         destination: data.destination,
@@ -45,12 +50,31 @@ let handleSubmit = () => {
       axios.post("http://localhost:8080/state/add",(state))
       .then((response)=> {
         console.log(response.data)
-        if()
+        if(data.destination == "Kerala"){
+          navigate('/Kerala');
+        }else if(data.destination == "Karnataka"){
+          navigate('/Karnataka');
+        }else if(data.destination == "Andhra"){
+          navigate('/Andhra');
+        }else if(data.destination == "Tamilnadu"){
+          navigate('/Tamilnadu')
+        }
+
+
+        
+      
+        // if(data.destination == 'Kerala'){
+        //   navigate('/Kerala');
+        // }else{
+        //   console.log("data unavailable")
+        // }
+        
       })
       .catch((err)=>{
         console.log(err)
 
       })
+      
     }
 
   return (
@@ -109,7 +133,7 @@ let handleSubmit = () => {
 <input name='departure' value={data.departure} onChange={Data} type='date' className='w-25 col-3  text-center' />
 </div>
 <br></br><br></br>
-<button  onClick={handleSubmit} className='btn btn-info text-center'>Send Query➡️</button>
+<button  onClick={HandleSubmit} className='btn btn-info text-center'>Send Query➡️</button>
 </div>
 </div>
       </div>

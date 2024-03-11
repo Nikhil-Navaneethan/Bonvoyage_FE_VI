@@ -2,7 +2,9 @@
 background-image:url('homepg.jpg');
 background-repeat: no-repeat;
 } */
-
+/* body{
+    background-color: $cyan-200;
+} */
 .traveldeets{
     border:3px solid black;
     width: 80%;

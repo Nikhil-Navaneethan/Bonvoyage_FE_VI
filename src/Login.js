@@ -55,7 +55,7 @@ const handleSubmit1 =(event) =>{
  }
 
   return (
-    <div className='bg-info text-center'>
+    <div className='text-center'>
        <div className='box'>
         <form>
             <input type='text' placeholder="Email" name='email' value={data1.email} onChange={Data1}/><br></br>

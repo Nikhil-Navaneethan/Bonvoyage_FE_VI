@@ -36,7 +36,7 @@ export let Register = () => {
         }
     
   return (
-    <div  className='bg-info text-center'>
+    <div  className=' text-center'>
         <div className='box'>
         <form>
             <input type='text' placeholder="Name" name="name" value={data.name} onChange={Data}/><br></br>
