@@ -14,6 +14,7 @@ export let Register = () => {
     console.log(name,value);
     }
 
+    
 
     let handleSubmit = () => {
         let register = {
@@ -32,6 +33,7 @@ export let Register = () => {
             })  
                 .then(Response => {
                     console.log("Data Received" + Response);
+                    alert("Register Successful")
                 })
         }
     
@@ -44,7 +46,7 @@ export let Register = () => {
             <input type='text' placeholder="Email" name='email' value={data.email} onChange={Data} /><br></br>
             <input type='password' placeholder="Password" minLength="8" maxLength="15" name='passcode' value={data.passcode} onChange={Data}/><br></br><br></br>
             <button className="btn btn-info" onClick={handleSubmit}>Create my account</button><br></br>
-            <Link to="/l">Already have an account</Link>
+            <Link to="/">Already have an account</Link>
         </form>
     </div>
     </div>

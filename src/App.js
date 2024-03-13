@@ -9,6 +9,7 @@ import Karnataka from './Karnataka';
 import Kerala from './Kerala';
 import Tamilnadu from './Tamilnadu';
 import Admin from './Admin';
+import Places from './Places';
 
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path='admin' element={<Admin/>}/>
-        <Route path="/l" element={<Login/>}/>
+        <Route path='/admin' element={<Admin/>}/>
+        <Route path='/places' element={<Places/>}/>
+        <Route path="/" element={<Login/>}/>
         <Route path="/r" element={<Register/>}/>
         <Route path="/hp/:username" element={<HomePage/>}/>
         <Route path="/Andhra" element={<Andhra/>}/>
